@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sky Wings. Your Ultimate Flight Booking Experience</title>
+
+<link rel="stylesheet" href="homeStyle.css">
+
+<!-- Font Awesome for icons (but makes icons easier) -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="main-header">
+
+<div class="container header-content">
+
+<div class="logo">
+
+<a href="#">Sky Wings</a>
+
+</div>
+
+<nav class="main-nav">
+
+<ul>
+
+<li><a href="#" class="active">Flights</a></li>
+
+<li><a href="myTrips.html">My Trips</a></li>
+
+<li><a href="checkIn.html">Check In</a></li>
+
+</ul>
+
+</nav>
+
+<button class="login-btn">Login</button>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero-search">
+
+<div class="container">
+
+<div class="search-card">
+
+<div class="search-tabs">
+
+<button class="tab-btn active" data-tab="round-trip">Round-trip</button>
+
+<button class="tab-btn" data-tab="one-way">One-way</button>
+
+<button class="tab-btn" data-tab="multi-city">Multi-city</button>
+
+</div>
+
+<div class="search-form-container">
+
+<!-- round-trip Form -->
+
+<div id="round-trip" class="search-form-tab active">
+
+<form class="flight-search-form">
+
+<div class="input-group">
+
+<label for="from-roundtrip">From</label>
+
+<input type="text" id="from-roundtrip" name="from" placeholder="Addis Ababa (ADD)">
+
+</div>
+
+<div class="swap-btn"><i class="fas fa-exchange-alt"></i></div>
+
+<div class="input-group">
+
+<label for="to-roundtrip">To</label>
+
+<input type="text" id="to-roundtrip" name="to" placeholder="Where to?">
+
+</div>
+
+<div class="input-group date-input">
+
+<label for="depart-roundtrip">Depart</label>
+
+<input type="date" id="depart-roundtrip" name="depart" value="2025-11-20">
+
+</div>
+
+<div class="input-group date-input">
+
+<label for="return-roundtrip">Return</label>
+
+<input type="date" id="return-roundtrip" value="2025-11-27">
+
+</div>
+
+<div class="options-row">
+
+<div class="checkbox-group">
+
+<input type="checkbox" id="direct-flights-roundtrip">
+
+<label for="direct-flights-roundtrip">Direct Sky Wings flights only</label>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>1 Adult</option>
+
+<option>2 Adults</option>
+
+</select>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>Economy</option>
+
+<option>Business</option>
+
+<option>First Class</option>
+
+</select>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>Tele Birr</option>
+
+<option>CBE</option>
+
+</select>
+
+</div>
+
+<button type="submit" class="search-button">Search Sky Wings flights</button>
+
+</div>
+
+</form>
+
+<div id="roundtrip-results" class="results-container"></div>
+
+</div>
+
+<!-- One-way Form -->
+
+<div id="one-way" class="search-form-tab">
+
+<form class="flight-search-form">
+
+<div class="input-group">
+
+<label for="from-oneway">From</label>
+
+<input type="text" id="from-oneway" placeholder="Addis Ababa (ADD)" required>
+
+</div>
+
+<div class="swap-btn"><i class="fas fa-exchange-alt"></i></div>
+
+<div class="input-group">
+
+<label for="to-oneway">To</label>
+
+<input type="text" id="to-oneway" placeholder="Where to?" required>
+
+</div>
+
+<div class="input-group date-input">
+
+<label oneway">Depart</label>
+
+<input type="date" id="depart-oneway" value="2025-11-20" required>
+
+</div>
+
+<div class="options-row">
+
+<div class="checkbox-group">
+
+<input type="checkbox" id="direct-flights-oneway">
+
+<label for="direct-flights-oneway">Direct Sky Wings flights only</label>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>1 Adult</option>
+
+<option>2 Adults</option>
+
+<option>, than two adults</option>
+
+</select>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>Economy</option>
+
+<option>Business</option>
+
+<option>First Class</option>
+
+</select>
+
+</div>
+
+<div class="dropdown-group">
+
+<select>
+
+<option>Tele Birr</option>
+
+<option>CBE</option>
+
+</select>
+
+</div>
+
+<button type="submit" class="search-button">Search Sky Wings flights</button>
+
+</div>
+
+</form>
+
+<div id="results" class="results-container"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="main-footer">
+
+<div class="container copyright-social">
+
+<p>Copyright ; 2025 Sky Wings Pte Ltd. All Rights Reserved</p>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
